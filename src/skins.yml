@@ -1,0 +1,79 @@
+#In this file, you will be able to modify or add minions skins.
+#To change a skin of a default minion, simply change it here and ensure the name of the skin is set in the config.yml for that minion (under DefaultSkin: <skinname>
+
+#To be able to change a skin on an already spawned minion, players will need the permission minions.skins.<SkinIdentifier>
+Skins:
+  Miner: #The skin identifier
+    DisplayName: "&3%PLAYERNAME%'s Miner"
+    HeadItem: "%HEAD%" #Use %HEAD% to get the player's head in game, or simply the name of a minecraft account to get the skin of that (without %'s)
+    HeadDisplayName: "&7Default &3Miner Skin"
+    Body: "0,0,0" #Requires an RGB colour - https://www.rapidtables.com/web/color/RGB_Color.html
+    Legs: "219,159,40" #rgb colour
+    Boots: "219,159,40" #rgb
+  Spiderman:
+    DisplayName: "&c%PLAYERNAMES%'s SpiderMan"
+    HeadItem: "SpiderMan578"
+    HeadDisplayName: "&CSpiderMan!"
+    Body: "0,0,255"
+    Legs: "0,0,255"
+    Boots: "255,0,0"
+  Batman:
+    DisplayName: "&c%PLAYERNAMES%'s Batman"
+    HeadItem: "1mBatman"
+    HeadDisplayName: "&7Batman!"
+    Body: "81,154,159"
+    Legs: "62,125,120"
+    Boots: "28,87,91"
+
+#The Skin GUI for the minions
+SkinGUI:
+  Settings:
+    DisplayName: "&eMinion Skins"
+    Size: 27 #Must be a multiple of 9
+  FillerItem: #This can be called anything
+    Slot: filler #Either specify a slot ID, or specify filler to fill empty spaces
+    Item: STAINED_GLASS_PANE:7 #Put damage of the material after a :
+    Action: none #Possible Actions: None, Close, Back (back to main menu),Default (for the default skin), or a Skin Identifier
+    DisplayName: " "
+    Lore: []
+  FirstSkin:
+    Slot: 10
+    Item: SKULL:%DEFAULTSKIN% #If using a Skull, put Skull:<playersname> (or %PLAYERSNAME% for the person who opened the inventory, or %DEFAULTSKIN% for the Minions Default Head)
+    Action: Default
+    DisplayName: "&e&lDefault Skin"
+    Lore:
+      - "&7Click me to equip the"
+      - "&7Default Skin"
+  SecondSkin:
+    Slot: 11
+    Item: SKULL:SpiderMan578
+    Action: Spiderman #Skin names are case-sensitive, it must match the identifier of the skin
+    DisplayName: "&cSpider Man"
+    Lore:
+      - "&7Click me to equip the"
+      - "&7Spider Man Skin"
+  ThirdSkin:
+    Slot: 12
+    Item: SKULL:1mBatman
+    Action: Batman #Skin names are case-sensitive, it must match the identifier of the skin
+    DisplayName: "&7Batman"
+    Lore:
+      - "&7Click me to equip the"
+      - "&7Batman Skin"
+  BackButton:
+    Slot: 22
+    Item: NETHER_STAR:0
+    Action: Back
+    DisplayName: "&cBack To Main Menu"
+    Lore:
+      - "&7Click to return to the"
+      - "&7Main Menu"
+#When requesting a skin for the first time, it can take a while (meaning opening an inventory containing lots of heads may take a while)
+#To speed up the processes, when the server loads we can cashe these head values, simply list the names of the heads here to do this
+HeadCache:
+  - MHF_ArrowUp
+  - MHF_ArrowRight
+  - MHF_ArrowDown
+  - MHF_ArrowLeft
+  - SpiderMan578
+  - 1mBatman

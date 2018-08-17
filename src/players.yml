@@ -1,0 +1,7 @@
+#Wouldn't suggest touching this file. Bad things will *probably* happen
+#Modifiying this file while the server is online will NOT work
+#File save format:
+#Players
+#  PlayerUUID
+#    Minion,world,xpos,ypos,zpos,yaw,health,worldforchest,xpos,ypos,zpos
+Players:

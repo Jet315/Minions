@@ -1,0 +1,66 @@
+#############################################
+#                                           #
+#                  Minions                  #
+#             Created by Jet315             #
+#                                           #
+#############################################
+
+#The prefix that is shown before the plugin
+PluginsPrefix: "&eMinions &7» "
+
+#Highly suggested - If a minion's health is disabled, this wont matter, however if a player
+#tries picking up a minion which does not have full health the player will be unable to (The player will need to feed it first)
+#Setting this to false will allow players to break the minion, and replace for full health
+OnlyAllowMinionPickupIfFullHealth: true
+
+#So if food is enabled for a minion, right-clicking a minion with food specified from this list will heal it by the set amount
+#Format: Material:data:amount
+FoodList:
+  - BREAD:0:2 #Will heal two hearts of a minion
+  - APPLE:0:2 #Will heal two hearts of a minion
+  - COOKED_BEEF:0:4
+  - COOKED_MUTTON:0:4
+  - PORK:0:4
+  - COOKED_CHICKEN:0:4
+  - GOLDEN_APPLE:0:10 #Gapple - 10 hearts
+  - GOLDEN_APPLE:1:20 #Super gapple - 20 hearts
+
+#Any disabled worlds?
+#DisabledWorlds: []
+DisabledWorlds:
+  - world_the_end
+
+#Any blocks you wish the minion not to destroy?
+#This list may not work for custom minions (developed by other developers)
+DisabledBlocks:
+  - BEDROCK
+  - CHEST
+  - DRAGON_EGG
+
+MaxMinionsAllowed:
+  - minions.place.default:3 #Specifiy the permission : number of minions allowed. Depending on what permission the user has will depend on how many the user can place. the permission minions.admin.bypasslimit can also be used for no limit
+  - minions.place.vip:5
+  - minions.place.god:10
+
+Minions:
+  Miner: #identifier (To customise control panel find Miner in controlpanel.yml)
+    Settings:
+      TicksPerAnimation: 5 #How often do you want the animation to update in ticks (20 = 1 second)
+      TicksPerAction: 50 #How often do you want the minion to mine the rock infront in ticks (20 = 1 second)
+      DefaultSkin: Miner #Want to change the default skin? Check the skins.yml file (You can modify the Miner skin, or create your own one!)
+    Health:
+      EnableHealth: true #Health for all Minions is 20, health goes down over time & is recovered by feeding a minion. When health gets to 0 the minion will stop
+      ActionPerHealth: 10 #The amount of actions (in this case block mines) the minion can do before dropping 1 health
+      RightClickWithFoodToFeed: true #Whether the people can right-click the minion with food to heal it
+      FeedWithMoney: true #Players will click a GUI option to feed with money
+      FeedWithMoneyCost: 200 #If the above is true & the GUI has a 'feedwithmoney' option, how much should it cost them to fully feed the minion?
+    DisplayItem: #
+      Item: NETHER_STAR
+      Damage: 0 #For items that require additional data, put this here
+      Glow: true #Do you want the item to have the enchanted glow?
+      DisplayName: "&3Miner &eMinion"
+      Lore:
+        - "&7Right-Click this Minion"
+        - "&7to place it! Once placed"
+        - "&7it will mine the block infront."
+        - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
