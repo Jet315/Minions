@@ -23,6 +23,9 @@ HealSuccessful: "&CYou have healed the minion by %HEALAMOUNT% hearts"
 HealNotNeeded: "&CThe minions health is already full! No need to heal it!"
 VaultNotInstalled: "&CVault is not installed, contact your System Administrator to enable vault!"
 
+NotEnoughMoneyToUpgradeMinion: "&cYou do not have the money to upgrade the minion!" #%MONEYNEEDED% can be used as a placeholder
+MinionAlreadyMaxLevel: "&cThe minion cannot be upgraded anymore!"
+
 #rotation
 MinionRotatedMessage: "&aYou have rotated the minion &e%DIRECTION%"
 
@@ -47,3 +50,5 @@ GivenMinion: "&aYou have been given a &b%TYPE% &aMinion!" #Placeholders, %AMOUNT
 MaxMinionAmount: "&cYou cannot place anymore Minions as you already have %MAXAMOUNTALLOWED%" #placeholder will return the max minions allowed for that user
 
 BreakMinionWithFullInventory: "&cYour inventory was full! The Minion has been dropped on the floor!"
+
+MinionNameMaxLength: "&cThis minion name is too long! Try a shorter one!"

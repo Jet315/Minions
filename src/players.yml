@@ -1,7 +1,8 @@
-#Wouldn't suggest touching this file. Bad things will *probably* happen
-#Modifiying this file while the server is online will NOT work
-#File save format:
-#Players
+# 
 #  PlayerUUID
-#    Minion,world,xpos,ypos,zpos,yaw,health,worldforchest,xpos,ypos,zpos
+#    Minion,world,xpos,ypos,zpos,yaw,health,worldforchest,xpos,ypos,zpos,stats,level
 Players:
+  4a9a169c-0ce8-4f6a-b945-2163606e957c:
+  - Miner,world,183,67,-151,0,20,null,0,0,0,3,2
+  - Slayer,world,182,67,-159,0,20,null,0,0,0,0,1
+  afad027c-eb9a-4640-89cf-3866a41c6bc9: []

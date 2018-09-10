@@ -13,6 +13,9 @@ PluginsPrefix: "&eMinions &7» "
 #Setting this to false will allow players to break the minion, and replace for full health
 OnlyAllowMinionPickupIfFullHealth: true
 
+#The maximum allowed minion name length in characters(Can be anything really)
+MaxAllowedNameLength: 20
+
 #So if food is enabled for a minion, right-clicking a minion with food specified from this list will heal it by the set amount
 #Format: Material:data:amount
 FoodList:
@@ -36,6 +39,16 @@ DisabledBlocks:
   - BEDROCK
   - CHEST
   - DRAGON_EGG
+  - MOB_SPAWNER
+
+#Same as above, any entities you wish the minions not to kill?
+#Again may not work for custom made minions
+DisabledEntities:
+  - ENDER_DRAGON
+  - WITHER
+  - GHAST
+  - PLAYER
+  - ARMOR_STAND
 
 MaxMinionsAllowed:
   - minions.place.default:3 #Specifiy the permission : number of minions allowed. Depending on what permission the user has will depend on how many the user can place. the permission minions.admin.bypasslimit can also be used for no limit
@@ -45,7 +58,7 @@ MaxMinionsAllowed:
 Minions:
   Miner: #identifier (To customise control panel find Miner in controlpanel.yml)
     Settings:
-      TicksPerAnimation: 5 #How often do you want the animation to update in ticks (20 = 1 second)
+      TicksPerAnimation: 4 #How often do you want the animation to update in ticks (20 = 1 second)
       TicksPerAction: 50 #How often do you want the minion to mine the rock infront in ticks (20 = 1 second)
       DefaultSkin: Miner #Want to change the default skin? Check the skins.yml file (You can modify the Miner skin, or create your own one!)
     Health:
@@ -55,12 +68,62 @@ Minions:
       FeedWithMoney: true #Players will click a GUI option to feed with money
       FeedWithMoneyCost: 200 #If the above is true & the GUI has a 'feedwithmoney' option, how much should it cost them to fully feed the minion?
     DisplayItem: #
-      Item: NETHER_STAR
-      Damage: 0 #For items that require additional data, put this here
+      Item: MONSTER_EGG
+      Damage: 4 #For items that require additional data, put this here
       Glow: true #Do you want the item to have the enchanted glow?
-      DisplayName: "&3Miner &eMinion"
+      DisplayName: "&3Miner &eMinion" #Can use %STATS% for the blocks mined, and %LEVEL% for the level of the minion
       Lore:
-        - "&7Right-Click this Minion"
+        - "&7Right-Click this Minion" #Can use %STATS% for the blocks mined, and %LEVEL% for the level of the minion
         - "&7to place it! Once placed"
         - "&7it will mine the block infront."
         - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
+        - " "
+        - "&eBlocks Mined: &b%STATS%"
+  Slayer:
+    Settings:
+      TicksPerAnimation: 4
+      TicksPerAction: 20
+      DefaultSkin: Slayer
+    Health:
+      EnableHealth: true
+      ActionPerHealth: 4
+      RightClickWithFoodToFeed: true
+      FeedWithMoney: true
+      FeedWithMoneyCost: 200
+    DisplayItem:
+      Item: NETHER_STAR
+      Damage: 0
+      Glow: true
+      DisplayName: "&cSlayer &eMinion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
+      Lore:
+        - "&7Right-Click this Minion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
+        - "&7to place it! Once placed"
+        - "&7it will kill mobs within a"
+        - "&75x5x5 Radius!"
+        - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
+        - " "
+        - "&eMobs Killed: &b%STATS%"
+  Collector:
+    Settings:
+      TicksPerAnimation: 4
+      TicksPerAction: 100
+      DefaultSkin: Collector
+    Health:
+      EnableHealth: true
+      ActionPerHealth: 15
+      RightClickWithFoodToFeed: true
+      FeedWithMoney: true
+      FeedWithMoneyCost: 200
+    DisplayItem:
+      Item: NETHER_STAR
+      Damage: 0
+      Glow: true
+      DisplayName: "&eCollector Minion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
+      Lore:
+        - "&7Right-Click this Minion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
+        - "&7to place it! Once placed"
+        - "&7it will collect all items"
+        - "&7with a 5x5x5 Radius!"
+        - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
+        - " "
+        - "&eItems Collected: &b%STATS%"

@@ -4,26 +4,40 @@
 #To be able to change a skin on an already spawned minion, players will need the permission minions.skins.<SkinIdentifier>
 Skins:
   Miner: #The skin identifier
-    DisplayName: "&3%PLAYERNAME%'s Miner"
+    DisplayName: "&3%PLAYERNAME%'s Miner &7Level %LEVEL%"
     HeadItem: "%HEAD%" #Use %HEAD% to get the player's head in game, or simply the name of a minecraft account to get the skin of that (without %'s)
     HeadDisplayName: "&7Default &3Miner Skin"
     Body: "0,0,0" #Requires an RGB colour - https://www.rapidtables.com/web/color/RGB_Color.html
-    Legs: "219,159,40" #rgb colour
-    Boots: "219,159,40" #rgb
+    Legs: "40,159,219" #rgb colour
+    Boots: "40,159,219" #rgb
+  Slayer:
+    DisplayName: "&3%PLAYERNAME%'s Slayer &7Level &e%LEVEL%"
+    HeadItem: "%HEAD%"
+    HeadDisplayName: "&7Default &cSlayer Skin"
+    Body: "255,0,0" #Requires an RGB colour
+    Legs: "255,0,0" #rgb colour
+    Boots: "55,150,0" #rgb
+  Collector:
+    DisplayName: "&3%PLAYERNAME%'s Collector &7Level &e%LEVEL%"
+    HeadItem: "%HEAD%"
+    HeadDisplayName: "&7Default &cSlayer Skin"
+    Body: "238,255,11" #Requires an RGB colour
+    Legs: "156,159,113" #rgb colour
+    Boots: "238,255,11" #rgb
   Spiderman:
-    DisplayName: "&c%PLAYERNAMES%'s SpiderMan"
+    DisplayName: "&c%PLAYERNAMES%'s SpiderMan &7Level &e%LEVEL%"
     HeadItem: "SpiderMan578"
     HeadDisplayName: "&CSpiderMan!"
     Body: "0,0,255"
     Legs: "0,0,255"
     Boots: "255,0,0"
   Batman:
-    DisplayName: "&c%PLAYERNAMES%'s Batman"
+    DisplayName: "&c%PLAYERNAMES%'s Batman &7Level &e%LEVEL%"
     HeadItem: "1mBatman"
-    HeadDisplayName: "&7Batman!"
-    Body: "81,154,159"
-    Legs: "62,125,120"
-    Boots: "28,87,91"
+    HeadDisplayName: "&cBatman!"
+    Body: "159,154,81"
+    Legs: "120,125,62"
+    Boots: "91,87,28"
 
 #The Skin GUI for the minions
 SkinGUI:
@@ -77,3 +91,4 @@ HeadCache:
   - MHF_ArrowLeft
   - SpiderMan578
   - 1mBatman
+  - RobinHood
