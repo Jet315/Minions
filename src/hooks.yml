@@ -1,7 +1,7 @@
 Hooks:
   UseWorldGuard: true
   UseVault: true
-  UseASkyBlock: false
-  UseTowny: false
-  UseAcidIsland: false
-  UseFactions: false
+  UseASkyBlock: true
+  UseTowny: true
+  UseAcidIsland: true
+  UseFactions: true

@@ -1,0 +1,11 @@
+name: Minions
+version: 3.0
+description: A way to have minions perform tasks for you!
+author: Jet315
+website: https://www.spigotmc.org/members/jet315.15295/
+main: me.jet315.minions.Core
+softdepend: [Vault,WorldEdit,ASkyBlock,Towny,AcidIsland,Factions]
+commands:
+  minions:
+    description: The base command for the Minion's plugin
+    aliases: [minion,robots,robot]

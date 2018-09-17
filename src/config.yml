@@ -14,7 +14,7 @@ PluginsPrefix: "&eMinions &7» "
 OnlyAllowMinionPickupIfFullHealth: true
 
 #The maximum allowed minion name length in characters(Can be anything really)
-MaxAllowedNameLength: 20
+MaxAllowedNameLength: 16
 
 #So if food is enabled for a minion, right-clicking a minion with food specified from this list will heal it by the set amount
 #Format: Material:data:amount
@@ -50,6 +50,9 @@ DisabledEntities:
   - PLAYER
   - ARMOR_STAND
 
+#Same as above, any materials you wish the item not to pickup
+DisabledItems: []
+
 MaxMinionsAllowed:
   - minions.place.default:3 #Specifiy the permission : number of minions allowed. Depending on what permission the user has will depend on how many the user can place. the permission minions.admin.bypasslimit can also be used for no limit
   - minions.place.vip:5
@@ -68,8 +71,8 @@ Minions:
       FeedWithMoney: true #Players will click a GUI option to feed with money
       FeedWithMoneyCost: 200 #If the above is true & the GUI has a 'feedwithmoney' option, how much should it cost them to fully feed the minion?
     DisplayItem: #
-      Item: MONSTER_EGG
-      Damage: 4 #For items that require additional data, put this here
+      Item: NETHER_STAR
+      Damage: 0 #For items that require additional data, put this here
       Glow: true #Do you want the item to have the enchanted glow?
       DisplayName: "&3Miner &eMinion" #Can use %STATS% for the blocks mined, and %LEVEL% for the level of the minion
       Lore:
@@ -79,10 +82,11 @@ Minions:
         - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
         - " "
         - "&eBlocks Mined: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"
   Slayer:
     Settings:
       TicksPerAnimation: 4
-      TicksPerAction: 20
+      TicksPerAction: 140
       DefaultSkin: Slayer
     Health:
       EnableHealth: true
@@ -98,11 +102,12 @@ Minions:
       Lore:
         - "&7Right-Click this Minion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
         - "&7to place it! Once placed"
-        - "&7it will kill mobs within a"
-        - "&75x5x5 Radius!"
+        - "&7it will kill mobs within its"
+        - "&7range! "
         - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
         - " "
         - "&eMobs Killed: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"
   Collector:
     Settings:
       TicksPerAnimation: 4
@@ -123,7 +128,83 @@ Minions:
         - "&7Right-Click this Minion" #Can use %STATS% for the kills the minion has done, and %LEVEL% for the level of the minion
         - "&7to place it! Once placed"
         - "&7it will collect all items"
-        - "&7with a 5x5x5 Radius!"
+        - "&7within its range!"
         - "&7Remember to feed it!" #If you don't want minions to be fed, maybe delete this :)
         - " "
         - "&eItems Collected: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"
+  Feeder:
+    Settings:
+      TicksPerAnimation: 4
+      TicksPerAction: 300
+      DefaultSkin: Feeder
+    Health:
+      EnableHealth: true
+      ActionPerHealth: 15
+      RightClickWithFoodToFeed: true
+      FeedWithMoney: true
+      FeedWithMoneyCost: 200
+    DisplayItem:
+      Item: NETHER_STAR
+      Damage: 0
+      Glow: true
+      DisplayName: "&eFeeder Minion"
+      Lore:
+        - "&7Right-Click this Minion"
+        - "&7to place it! Once placed"
+        - "&7it will feed all minions"
+        - "&7within its range!"
+        - "&7Remember to feed it!"
+        - " "
+        - "&eHunger Healed: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"
+  Lumberjack:
+    Settings:
+      TicksPerAnimation: 4
+      TicksPerAction: 160
+      DefaultSkin: Lumberjack
+    Health:
+      EnableHealth: true
+      ActionPerHealth: 10
+      RightClickWithFoodToFeed: true
+      FeedWithMoney: true
+      FeedWithMoneyCost: 200
+    DisplayItem:
+      Item: NETHER_STAR
+      Damage: 0
+      Glow: true
+      DisplayName: "&eLumberjack Minion"
+      Lore:
+        - "&7Right-Click this Minion"
+        - "&7to place it! Once placed"
+        - "&7it start chopping logs & leaves"
+        - "&7within its range!"
+        - "&7Remember to feed it!"
+        - " "
+        - "&eLogs chopped: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"
+  Farmer:
+    Settings:
+      TicksPerAnimation: 4
+      TicksPerAction: 60 #one complete harvest = 1 action
+      DefaultSkin: Farmer
+    Health:
+      EnableHealth: true
+      ActionPerHealth: 15
+      RightClickWithFoodToFeed: true
+      FeedWithMoney: true
+      FeedWithMoneyCost: 200
+    DisplayItem:
+      Item: NETHER_STAR
+      Damage: 0
+      Glow: true
+      DisplayName: "&eFarmer Minion"
+      Lore:
+        - "&7Right-Click this Minion"
+        - "&7to place it! Once placed"
+        - "&7it start farming crops"
+        - "&7within its range!"
+        - "&7Remember to feed it!"
+        - " "
+        - "&eTotal Harvests: &b%STATS%"
+        - "&eLevel: &b%LEVEL%"

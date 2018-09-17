@@ -4,35 +4,56 @@
 #To be able to change a skin on an already spawned minion, players will need the permission minions.skins.<SkinIdentifier>
 Skins:
   Miner: #The skin identifier
-    DisplayName: "&3%PLAYERNAME%'s Miner &7Level %LEVEL%"
+    DisplayName: "&3%PLAYERNAME%'s Miner"
     HeadItem: "%HEAD%" #Use %HEAD% to get the player's head in game, or simply the name of a minecraft account to get the skin of that (without %'s)
     HeadDisplayName: "&7Default &3Miner Skin"
     Body: "0,0,0" #Requires an RGB colour - https://www.rapidtables.com/web/color/RGB_Color.html
     Legs: "40,159,219" #rgb colour
     Boots: "40,159,219" #rgb
   Slayer:
-    DisplayName: "&3%PLAYERNAME%'s Slayer &7Level &e%LEVEL%"
+    DisplayName: "&3%PLAYERNAME%'s Slayer"
     HeadItem: "%HEAD%"
     HeadDisplayName: "&7Default &cSlayer Skin"
     Body: "255,0,0" #Requires an RGB colour
     Legs: "255,0,0" #rgb colour
     Boots: "55,150,0" #rgb
   Collector:
-    DisplayName: "&3%PLAYERNAME%'s Collector &7Level &e%LEVEL%"
+    DisplayName: "&3%PLAYERNAME%'s Collector"
     HeadItem: "%HEAD%"
-    HeadDisplayName: "&7Default &cSlayer Skin"
+    HeadDisplayName: "&7Default &cCollector Skin"
     Body: "238,255,11" #Requires an RGB colour
     Legs: "156,159,113" #rgb colour
     Boots: "238,255,11" #rgb
+  Feeder:
+    DisplayName: "&3%PLAYERNAME%'s FeederMinion"
+    HeadItem: "%HEAD%"
+    HeadDisplayName: "&7Default &cFeeder Skin"
+    Body: "238,255,40"
+    Legs: "156,159,100"
+    Boots: "238,255,40"
+  Lumberjack:
+    DisplayName: "&3%PLAYERNAME%'s Lumberjack"
+    HeadItem: "%HEAD%"
+    HeadDisplayName: "&7Default &cLumberjack Skin"
+    Body: "108,77,5"
+    Legs: "178,159,39"
+    Boots: "108,77,5"
+  Farmer:
+    DisplayName: "&3%PLAYERNAME%'s Farmer"
+    HeadItem: "%HEAD%"
+    HeadDisplayName: "&7Default &cFarmers Skin"
+    Body: "204,204,0"
+    Legs: "102,204,0"
+    Boots: "204,204,0"
   Spiderman:
-    DisplayName: "&c%PLAYERNAMES%'s SpiderMan &7Level &e%LEVEL%"
+    DisplayName: "&c%PLAYERNAMES%'s SpiderMan"
     HeadItem: "SpiderMan578"
     HeadDisplayName: "&CSpiderMan!"
     Body: "0,0,255"
     Legs: "0,0,255"
     Boots: "255,0,0"
   Batman:
-    DisplayName: "&c%PLAYERNAMES%'s Batman &7Level &e%LEVEL%"
+    DisplayName: "&c%PLAYERNAMES%'s Batman"
     HeadItem: "1mBatman"
     HeadDisplayName: "&cBatman!"
     Body: "159,154,81"

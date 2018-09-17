@@ -1,0 +1,12 @@
+MaxLevel: 3 #Don't edit this, the minion is not programed to go any higher!
+
+Levels:
+  CostToUpgradeToLevel2: 30000 #The cost to upgrade to level 2
+  CostToUpgradeToLevel3: 60000
+Settings:
+  SettingsAtLevel1: 2x2x2 #For the Farmer minion, 2x2x2 means it will farm materials within 2 blocks either way of the minion (also 4x4x4)
+  SettingsAtLevel2: 4x4x4
+  SettingsAtLevel3: 6x6x6
+Messages:
+  MessageOnUpgradeTo2: '&aYou have upgraded the Farmer Minion to level 2!'
+  MessageOnUpgradeTo3: '&aYou have upgraded the Farmer Minion to the highest level!'
