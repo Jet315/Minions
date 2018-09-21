@@ -8,7 +8,7 @@ ControlPanel:
     FillerItem:
       Slot: filler #Either specify a slot ID, or specify filler to fill empty spaces
       Item: STAINED_GLASS_PANE:7 #Put damage of the material after a :
-      Action: none #Possible Actions: NONE, CLOSE, LEVELUP, ROTATE_NORTH, ROTATE_EAST, ROTATE_SOUTH, ROTATE_WEST,ROTATE, SKINS (opens Skin Menu for that minion), ATTACHCHEST, RENAME, PAYHEAL, HEAL (PAYHEAL will charge the user in money, HEAL will not)
+      Action: none #Possible Actions: NONE, CLOSE, LEVELUP, ROTATE_NORTH, ROTATE_EAST, ROTATE_SOUTH, ROTATE_WEST,ROTATE, SKINS (opens Skin Menu for that minion), ATTACHCHEST, RENAME, PAYHEAL, HEAL (PAYHEAL will charge the user in money, HEAL will not), EXP (Gives the experience the minion has to the player)
       DisplayName: " " #Placeholders: %MINIONNAME% get the minion name, %HEALTH% get the current minions health, %NEXTLEVELCOST% cost for the next level, %SETTINGVALUE% for the value of the setting, and %NEXTSETTINGVALUE% for the next (upgraded) setting value), and %LEVEL% current minion level
       Lore: [] #Same placeholders as aboved
     Skins:
@@ -73,7 +73,7 @@ ControlPanel:
         - "&7so that its blocks go into it!"
     Stats:
       Slot: 30
-      Item: EXP_BOTTLE
+      Item: DIAMOND_PICKAXE
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:
@@ -183,23 +183,31 @@ ControlPanel:
         - "&7Attach a chest to this minion"
         - "&7so that its mob drops go into it!"
     Stats:
-      Slot: 30
-      Item: EXP_BOTTLE
+      Slot: 29
+      Item: DIAMOND_SWORD
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:
         - "&7Your minion has killed"
         - "&e%STATS% &7mobs since being placed"
     Nametag:
-      Slot: 31
+      Slot: 30
       Item: NAME_TAG
       Action: RENAME
       DisplayName: "&e&lRename"
       Lore:
         - "&7Click to Rename"
         - "&7The minion!"
-    Health:
+    Exp:
       Slot: 32
+      Item: EXP_BOTTLE
+      Action: EXP
+      DisplayName: "&e&lEXP"
+      Lore:
+        - "&7Your minion has collected"
+        - "&e%EXP% &7EXP"
+    Health:
+      Slot: 33
       Item: COOKED_BEEF
       Action: NONE
       DisplayName: "&e&lHealth"
@@ -294,23 +302,31 @@ ControlPanel:
         - "&7Attach a chest to this minion"
         - "&7so that its items go into it!"
     Stats:
-      Slot: 30
-      Item: EXP_BOTTLE
+      Slot: 29
+      Item: ENDER_PEARL
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:
         - "&7Your minion has collected"
         - "&e%STATS% &7items since being placed"
     Nametag:
-      Slot: 31
+      Slot: 30
       Item: NAME_TAG
       Action: RENAME
       DisplayName: "&e&lRename"
       Lore:
         - "&7Click to Rename"
         - "&7The minion!"
-    Health:
+    Exp:
       Slot: 32
+      Item: EXP_BOTTLE
+      Action: EXP
+      DisplayName: "&e&lEXP"
+      Lore:
+        - "&7Your minion has collected"
+        - "&e%EXP% &7EXP"
+    Health:
+      Slot: 33
       Item: COOKED_BEEF
       Action: NONE
       DisplayName: "&e&lHealth"
@@ -398,7 +414,7 @@ ControlPanel:
         - "&7$200"
     Stats:
       Slot: 30
-      Item: EXP_BOTTLE
+      Item: DIAMOND_HOE
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:
@@ -509,7 +525,7 @@ ControlPanel:
         - "&7so that its chopped logs go into it!"
     Stats:
       Slot: 30
-      Item: EXP_BOTTLE
+      Item: DIAMOND_PICKAXE
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:
@@ -620,7 +636,7 @@ ControlPanel:
         - "&7so that its crops go into it!"
     Stats:
       Slot: 30
-      Item: EXP_BOTTLE
+      Item: DIAMOND_AXE
       Action: NONE
       DisplayName: "&e&lStats"
       Lore:

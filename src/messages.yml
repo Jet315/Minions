@@ -52,3 +52,5 @@ MaxMinionAmount: "&cYou cannot place anymore Minions as you already have %MAXAMO
 BreakMinionWithFullInventory: "&cYour inventory was full! The Minion has been dropped on the floor!"
 
 MinionNameMaxLength: "&cThis minion name is too long! Try a shorter one!"
+
+MinionExpGiven: "&AYou have collected &e%EXP% EXP &afrom this minion!"
