@@ -186,11 +186,11 @@ Minions:
   Farmer:
     Settings:
       TicksPerAnimation: 4
-      TicksPerAction: 60 #one complete harvest = 1 action
+      TicksPerAction: 80
       DefaultSkin: Farmer
     Health:
       EnableHealth: true
-      ActionPerHealth: 15
+      ActionPerHealth: 50
       RightClickWithFoodToFeed: true
       FeedWithMoney: true
       FeedWithMoneyCost: 200
@@ -206,5 +206,5 @@ Minions:
         - "&7within its range!"
         - "&7Remember to feed it!"
         - " "
-        - "&eTotal Harvests: &b%STATS%"
+        - "&eCrops Harvest: &b%STATS%"
         - "&eLevel: &b%LEVEL%"

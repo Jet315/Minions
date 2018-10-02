@@ -1,56 +1,40 @@
-#Messages
-NoPermission: "&cYou do not have permissions to do this!"
-NoPermissionForSkin: "&cYou do not have permission to use this skin" #Maybe put your buycraft / however the player gets skins :) - Placeholder %SKIN% can be used to get the skin identifier
-
-ErrorOccurred: "&cOh dear, an error occurred. Try again!"
-
-#If they try placing the minion in a no build zone, or similar:
-CantPlaceMinionHere: "&cYou cannot place the minion here!"
-
-#The message that appears if the minion was successfully placed, although the action that the minion does is blocked
-#(For example, placed next on the edge of spawn, and trying to get the minion to mine in spawn)
-MinionCannotPerformHere: "&cThe minion cannot perform his actions here (is the minion in a suitable area?)"
-
-#The message that appears when they click the 'rename' button in the UI
-RenameMessage: "&eType the text you wish the Minions Name to be! &cCancel&e can also be used to cancel this command"
-RenameMessageCanceled: "&eThe minion will not be renamed."
-RenameMessageSuccess: "&eYou successfully changed the minions name to&f %NAME%" #%NAME% will get the minions display name
-
-MinionMustBeFullHealthToDestroy: "&cThe minion must have full health to pick it up!"
-
-NotEnoughMoneyToHealMinion: "&CYou do not have $%MONEYNEEDED% to do this!"
-HealSuccessful: "&CYou have healed the minion by %HEALAMOUNT% hearts"
-HealNotNeeded: "&CThe minions health is already full! No need to heal it!"
-VaultNotInstalled: "&CVault is not installed, contact your System Administrator to enable vault!"
-
-NotEnoughMoneyToUpgradeMinion: "&cYou do not have the money to upgrade the minion!" #%MONEYNEEDED% can be used as a placeholder
-MinionAlreadyMaxLevel: "&cThe minion cannot be upgraded anymore!"
-
-#rotation
-MinionRotatedMessage: "&aYou have rotated the minion &e%DIRECTION%"
-
-#Link a chest messages
-LinkAChestMessage: "&aRight-Click a chest to link a chest!"
-LinkAChestSuccess: "&aSuccess! This chest is now linked to the minion!"
-LinkAChestUnattached: "&aThis minions chest has been removed!"
-LinkAChestFail: "&cYou did not right click a chest quick enough! If you would like to attach a chest to the minion, please try again"
-LinkChestBroken: "&cYou have broken a chest linked to a minion!"
-
-UnknownCommand: "&cUnknown Command"
-
-#When /minions is entered - Placeholders %VERSION%
+NoPermission: '&cYou do not have permissions to do this!'
+NoPermissionForSkin: '&cYou do not have permission to use this skin'
+ErrorOccurred: '&cOh dear, an error occurred. Try again!'
+CantPlaceMinionHere: '&cYou cannot place the minion here!'
+MinionCannotPerformHere: '&cThe minion cannot perform his actions here (is the minion
+  in a suitable area?)'
+RenameMessage: '&eType the text you wish the Minions Name to be! &cCancel&e can also
+  be used to cancel this command'
+RenameMessageCanceled: '&eThe minion will not be renamed.'
+RenameMessageSuccess: '&eYou successfully changed the minions name to&f %NAME%'
+MinionMustBeFullHealthToDestroy: '&cThe minion must have full health to pick it up!'
+NotEnoughMoneyToHealMinion: '&CYou do not have $%MONEYNEEDED% to do this!'
+HealSuccessful: '&CYou have healed the minion by %HEALAMOUNT% hearts'
+HealNotNeeded: '&CThe minions health is already full! No need to heal it!'
+VaultNotInstalled: '&CVault is not installed, contact your System Administrator to
+  enable vault!'
+NotEnoughMoneyToUpgradeMinion: '&cYou do not have the money to upgrade the minion!'
+MinionAlreadyMaxLevel: '&cThe minion cannot be upgraded anymore!'
+MinionRotatedMessage: '&aYou have rotated the minion &e%DIRECTION%'
+LinkAChestMessage: '&aRight-Click a chest to link a chest!'
+LinkAChestSuccess: '&aSuccess! This chest is now linked to the minion!'
+LinkAChestUnattached: '&aThis minions chest has been removed!'
+LinkAChestFail: '&cYou did not right click a chest quick enough! If you would like
+  to attach a chest to the minion, please try again'
+LinkChestBroken: '&cYou have broken a chest linked to a minion!'
+UnknownCommand: '&cUnknown Command'
 HelpCommand:
-  - "&b&m---------------&r&e[ &e&lMinions &a%VERSION% &e]&b&m---------------"
-  - "&8/&aminions about &7- &fDisplays information about the plugin"
-  - "&8/&aminions give {online_player} {minion_type} {amount} &7- &fGives the specified user that minion"
-  - "&8/&aminions reload &7- &fReloads the configuration file however a restart is suggested."
-
-GivenMinion: "&aYou have been given a &b%TYPE% &aMinion!" #Placeholders, %AMOUNT% and %TYPE%
-
-MaxMinionAmount: "&cYou cannot place anymore Minions as you already have %MAXAMOUNTALLOWED%" #placeholder will return the max minions allowed for that user
-
-BreakMinionWithFullInventory: "&cYour inventory was full! The Minion has been dropped on the floor!"
-
-MinionNameMaxLength: "&cThis minion name is too long! Try a shorter one!"
-
-MinionExpGiven: "&AYou have collected &e%EXP% EXP &afrom this minion!"
+- '&b&m---------------&r&e[ &e&lMinions &a%VERSION% &e]&b&m---------------'
+- '&8/&aminions about &7- &fDisplays information about the plugin'
+- '&8/&aminions give {online_player} {minion_type} {amount} &7- &fGives the specified
+  user that minion'
+- '&8/&aminions reload &7- &fReloads the configuration file however a restart is suggested.'
+GivenMinion: '&aYou have been given a &b%TYPE% &aMinion!'
+MaxMinionAmount: '&cYou cannot place anymore Minions as you already have %MAXAMOUNTALLOWED%'
+BreakMinionWithFullInventory: '&cYour inventory was full! The Minion has been dropped
+  on the floor!'
+MinionNameMaxLength: '&cThis minion name is too long! Try a shorter one!'
+MinionExpGiven: '&AYou have collected &e%EXP% EXP &afrom this minion!'
+MinionStoreNotEnoughMoney: '&cYou do not have enough money to buy this Minion!'
+MinionStorePurchase: '&cYou have bought %MINIONTYPE% for %MONEYNEEDED%!'

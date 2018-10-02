@@ -1,0 +1,91 @@
+#So in this file you can create & customise the store
+Store:
+  Settings:
+    DisplayName: "&eMinion Store"
+    Size: 36 #Must be a multiple of 9
+  FillerItem: #This can be called anything
+    Slot: filler #Either specify a slot ID, or specify filler to fill empty spaces
+    Item: STAINED_GLASS_PANE:7 #Put damage of the material after a :
+    Action: none #Possible Actions: CLOSE, <MinionName> to purchase a minion, or none
+    Cost: 0 #cost - must be integer
+    DisplayName: " "
+    Lore: []
+  MinerMinion:
+    Slot: 10
+    Item: SKULL:Miner #If using a Skull, put Skull:<playersname>
+    Action: Miner
+    Cost: 3000
+    DisplayName: "&e&lMiner Minion"
+    Lore:
+      - "&aThe Miner Minion"
+      - "&aOnce placed will mine"
+      - "&athe block infront!"
+      - " "
+      - "&eCost: $3,000"
+  CollectorMinion:
+    Slot: 11
+    Item: SKULL:MCSetups
+    Action: Collector
+    Cost: 3500
+    DisplayName: "&e&lCollector Minion"
+    Lore:
+      - "&aThe Collector Minion"
+      - "&awill collect all items"
+      - "&awithin its radius!"
+      - " "
+      - "&eCost: $3,500"
+  FeederMinion:
+    Slot: 12
+    Item: SKULL:Cow
+    Action: Feeder
+    Cost: 3500
+    DisplayName: "&e&lFeeder Minion"
+    Lore:
+      - "&aThe Feeder Minion"
+      - "&awill feed all nearby"
+      - "&aMinions within its radius!"
+      - " "
+      - "&eCost: $3,500"
+  FarmerMinion:
+    Slot: 14
+    Item: SKULL:Farmer
+    Action: Collector
+    Cost: 4000
+    DisplayName: "&e&lFarmer Minion"
+    Lore:
+      - "&aThe Farmer Minion"
+      - "&awill farm all crops"
+      - "&athat it is placed next to"
+      - " "
+      - "&eCost: $4,000"
+  LumberMinion:
+    Slot: 15
+    Item: SKULL:Builder
+    Action: Lumberjack
+    Cost: 4500
+    DisplayName: "&e&lLumberjack Minion"
+    Lore:
+      - "&aThe Lumberjack Minion"
+      - "&awill chop all trees nearby"
+      - "&aand replant them"
+      - " "
+      - "&eCost: $4,500"
+  SlayerMinion:
+    Slot: 16
+    Item: SKULL:1mBatman
+    Action: Slayer
+    Cost: 5000
+    DisplayName: "&e&lSlayer Minion"
+    Lore:
+      - "&aThe Slayer Minion"
+      - "&awill kill all mobs"
+      - "&awithin its radius!"
+      - " "
+      - "&eCost: $5,000"
+  Close:
+    Slot: 31
+    Item: BARRIER:0
+    Action: close
+    Cost: 0
+    DisplayName: "&c&lClose"
+    Lore: []

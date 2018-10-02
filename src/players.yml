@@ -1,9 +1,25 @@
-#Wouldn't suggest touching this file. Bad things will *probably* happen
-#Modifiying this file while the server is online will NOT work
-#File save format:
-#Players
+# 
 #  PlayerUUID
 #    Minion,world,xpos,ypos,zpos,yaw,health,worldforchest,xpos,ypos,zpos,stats,level
-#Do not edit this, this will update automatically
-ConfigVersion: "%LATEST%"
+ConfigVersion: '3.4'
 Players:
+  4a9a169c-0ce8-4f6a-b945-2163606e957c:
+  - Miner,world,194,67,-186,180,20,null,0,0,0,0,1
+  - Miner,world,194,67,-186,180,20,null,0,0,0,0,1
+  - Farmer,world,192,67,-177,180,20,world,191,67,-182,20,1
+  - Farmer,world,192,67,-177,180,20,null,0,0,0,4,1
+  - Slayer,world,202,67,-178,270,20,null,0,0,0,26,3
+  - Miner,world,187,67,-186,180,20,null,0,0,0,0,1
+  - Miner,world,195,67,-186,270,20,null,0,0,0,0,1
+  - Miner,world,194,67,-186,270,20,null,0,0,0,0,1
+  - Miner,world,195,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,194,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,192,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,191,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,190,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,189,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,188,67,-186,0,20,null,0,0,0,0,1
+  - Miner,world,193,67,-186,270,20,null,0,0,0,0,1
+  - Miner,world,193,67,-186,0,20,null,0,0,0,0,1
+  afad027c-eb9a-4640-89cf-3866a41c6bc9:
+  - Slayer,world,212,67,-186,0,20,null,0,0,0,3,1
