@@ -1,4 +1,6 @@
 #So in this file you can create & customise the store
+Enabled: true
+
 Store:
   Settings:
     DisplayName: "&eMinion Store"
